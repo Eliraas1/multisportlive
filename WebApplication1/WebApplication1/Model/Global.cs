@@ -7,7 +7,7 @@ namespace WebApplication1.Model
 {
     public static class Global
     {
-        public static string API_KEY = "5260bcabdbmshfc303d95310ec07p1f2548jsn8016847b4731";
+        public static string API_KEY = "8da1334618msh6c1133b7750cc59p181c08jsn72fa4ddf0d58";
         public static string CONTACT_US_EMAIL = "team5SCE@gmail.com";
         public static string CONTACT_US_PASSWORD = "OfirGilOmer123!";
     }

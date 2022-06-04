@@ -2,7 +2,6 @@
 @model WebApplication1.Pages.LoginModel
 @{ }
 
-
 <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -11,20 +10,20 @@
 
                     <div class="mb-md-5 mt-md-4 pb-5 align-content-center">
 
-                        <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                        <h2 class="fw-bold mb-2 text-uppercase">Login</h2>                        
                         <p class="text-white-50 mb-5">Please enter username and password!</p>
                         <form method="post">
-                            <div class="form-outline form-white mb-4 col-lg-6  offset-3">
-                                <input type="text" asp-for="Model.EmailOrUserName" class="form-control" placeholder="Username\Email" />
+                            <div class="form-outline form-white mb-4 col-6">
+                                <input type="text" asp-for="Model.EmailOrUserName" class="form-control offset-6" placeholder="Username\Email" />
                                 <span asp-validation-for="Model.EmailOrUserName" class="text-danger"></span>
                             </div>
 
-                            <div class="form-outline form-white mb-4 col-lg-6 offset-3">
-                                <input type="password" asp-for="Model.Password" class="form-control" placeholder="Password" />
+                            <div class="form-outline form-white mb-4 col-6">
+                                <input type="password" asp-for="Model.Password" class="form-control offset-6" placeholder="Password" />
                                 <span asp-validation-for="Model.Password" class="text-danger"></span>
                             </div>
 
-                            <div class="form-outline form-white mb-4 col-lg-6 offset-3">
+                            <div class="form-outline form-white mb-4 col-6 offset-3">
                                 <label class="form-check-label" asp-for="Model.RememberMe">Remember Me?</label>
                                 <input type="checkbox" asp-for="Model.RememberMe" class="form-check-input" />
                             </div>
@@ -32,7 +31,7 @@
 
                             <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
-                            </form>
+                        </form>
                     </div>
 
                     <div>

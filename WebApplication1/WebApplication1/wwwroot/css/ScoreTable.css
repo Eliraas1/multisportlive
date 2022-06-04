@@ -179,10 +179,10 @@ button.btn-outline-dark{
     display: flex;
     align-items: center;
     font-weight: 600;
-    img{
+/*    img{
     width: 20px;
     margin-right: 12px;
-    }
+    }*/
 
 }
 
@@ -207,7 +207,7 @@ button.btn-outline-dark{
 }
 
 .column {
-    padding: 32px;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,14 +222,14 @@ button.btn-outline-dark{
 }
 
 .team-logo {
-    width: 100px;
-    height: 100px;
+/*    width: 100px;
+    height: 100px;*/
     display: flex;
-    align-items: center;
+    /*align-items: center;
     justify-content: center;
     border-radius: 50%;
     background-color: var(--color-bg-primary);
-    box-shadow: 0 4px 4px 0 rgba(#623ce6, 0.15), 0 0 0 15px var(--color-bg-secondary);
+    box-shadow: 0 4px 4px 0 rgba(#623ce6, 0.15), 0 0 0 15px var(--color-bg-secondary);*/
 /*    img 
 {
     width: 50px;

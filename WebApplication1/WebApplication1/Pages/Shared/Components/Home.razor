@@ -6,9 +6,10 @@
 @inject UserManager<ApplicationUser> userManager
 @inject IHttpContextAccessor HttpContextAccessor
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 <div class="container mt-3">
-    <marquee>@news</marquee>
-    <h2>Sport Api Project</h2>
+    <marquee style="color:black; font-weight:200;" >@news</marquee>
     <br />
 
 
@@ -248,15 +249,15 @@
                                             @*@index.league.name*@
                                         </div>
                                     }
-                                    <div class="match-actions">
-
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="() => { GameStatistics(index.id);}">
-                                            Statistics
-                                        </button>
-                                    </div>
+                                <div class="match-actions">
+                                    @*class="bi bi-info-circle text-decoration-none" href="" style="color:inherit;"*@
+                                    <!-- Button trigger modal -->
+                                    <a class="bi bi-info-circle text-decoration-none btn-link" style="color:inherit; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="() => { GameStatistics(index.id);}">
+                                    </a>
+                                </div>
                                 </div>
                                 <div class="match-content">
+                                    @*<i class="bi bi-info-circle text-decoration-none" href="" style="color:inherit; height:10px;"></i>*@
                                     <div class="column">
                                         <div class="team team--home">
                                             <div class="team-logo">

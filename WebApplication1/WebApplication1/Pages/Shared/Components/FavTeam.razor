@@ -39,7 +39,7 @@ else
                         <thead>
                             <tr>
                                 <th scope="col">Home</th>
-                                <th scope="col">Date/Score</th>
+                                <th scope="col">Score/Date</th>
                                 <th scope="col">Away</th>
                             </tr>
                         </thead>
@@ -49,18 +49,19 @@ else
 
                                 foreach(var stat in favteam_home)
                                 {
-                                    <tr>
-                                        <td>@stat.home_team.name</td>
-                                            @if(stat.status == "finished")
-                                            {
-                                                <td>@stat.home_score.current - @stat.away_score.current ( On : @stat.start_at ) </td>
-                                            }
-                                            else
-                                            {
-                                                <td>Start at : @stat.start_at</td>                                           
-                                            }
-                                        <td>@stat.away_team.name</td>
-                                    </tr>
+                            <tr>
+                                <td><img src="@stat.home_team.logo" style="object-fit:contain; width:35%" />@stat.home_team.name </td>
+                                @if (stat.status == "finished")
+                                {
+                                    <td>@stat.home_score.current - @stat.away_score.current ( On : @stat.start_at ) </td>
+                                }
+                                else
+                                {
+                                    <td>Start at : @stat.start_at</td>
+
+                                }
+                            <td><img src="@stat.away_team.logo" style="object-fit:contain; width:25%" /> @stat.away_team.name </td>
+                            </tr>
                                 }
                             }
                         </tbody>
@@ -86,7 +87,7 @@ else
                                 foreach(var stat in favteam_away)
                                 {
                                     <tr>
-                                        <td>@stat.home_team.name</td>
+                                        <td><img src="@stat.home_team.logo" style="object-fit:contain; width:25%" />@stat.home_team.name </td>
                                             @if(stat.status == "finished")
                                             {
                                                 <td>@stat.home_score.current - @stat.away_score.current</td>
@@ -95,7 +96,7 @@ else
                                             {
                                                 <td>@stat.start_at</td>                                           
                                             }
-                                        <td>@stat.away_team.name</td>
+                                    <td><img src="@stat.away_team.logo" style="object-fit:contain; width:25%" /> @stat.away_team.name </td>
                                     </tr>
                                 }
                             }
