@@ -22,7 +22,7 @@
         <br>
             <div class="container" id="pageHeader">
         <nav class="navbar navbar-expand-md navbar-light navbar-toggleable-md box-shadow mb-3">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Sport Api S.C.E</a>
+                <a class="navbar-brand" style="width:5%;" asp-area="" asp-page="/Index"><img src="~/img/תמונה1.png" class="rounded"  style="width:80%" alt="Cinque Terre"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,66 +30,64 @@
                 <div  class="navbar-collapse collapse d-md-inline-flex justify-content-between">
                     @if (SignInManager.IsSignedIn(User))
                     {
-                        <ul class="navbar-nav flex-grow-1 d-flex align-items-center">
-                            <li style="max-height:40px" class="nav-item d-flex align-items-center">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                            </li>
-                            <li style="max-height:40px" class="nav-item d-flex align-items-center">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/UserPanel">User Panel</a>
-                            </li>
+                    <ul class="navbar-nav flex-grow-1 d-flex align-items-center">
+                        <li style="max-height:40px" class="nav-item d-flex align-items-center">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index"><i class="fa-solid fa-house"></i>Home</a>
+                        </li>
+                        <li style="max-height:40px" class="nav-item d-flex align-items-center">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/UserPanel"><i class="fa-solid fa-user-pen"></i>Panel</a>
+                        </li>
                         @if (!User.IsInRole("Standard"))
                         {
 
                             <li style="max-height:40px" class="nav-item d-flex align-items-center">
-                                <a class="nav-link text-dark" id="favourite_team" asp-area="" asp-page="/FavTeam">Favourite Team</a>
+                                <a class="nav-link text-dark" id="favourite_team" asp-area="" asp-page="/FavTeam"><i class="fa-solid fa-star"></i>Favourite team</a>
                             </li>
                             <li style="max-height:40px" class="nav-item d-flex align-items-center">
-                                <a class="nav-link text-dark" id="leagues" asp-area="" asp-page="/LeaguesTable">Leagues</a>
-                            </li>
-                        }
-                            <li style="max-height:40px" class="nav-item d-flex align-items-center">
-                                <a class="nav-link text-dark" id="contact_us" asp-area="" asp-page="/ContactUs">Contact Us</a>
-                            </li>
-                          @*<li style="max-height:40px" class="nav-item d-flex align-items-center">
-                                <form style="max-height:40px" class="navbar-nav d-flex justify-content-center "margin-left:100px">
-                                    <input style="max-height:40px" class="form-control me-2" type="text" placeholder="Search">
-                                    
-                                    <button style="max-height:40px" class="btn btn-primary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    <br/>
-                                </form>
-                            </li>*@
-                            @if (User.IsInRole("Admin"))
+                                <a class="nav-link text-dark" id="leagues" asp-area="" asp-page="/LeaguesTable"><i class="fa-solid fa-table-list"></i>Leagues</a>
+                            </li>}
+                        <li style="max-height:40px" class="nav-item d-flex align-items-center">
+                            <a class="nav-link text-dark" id="contact_us" asp-area="" asp-page="/ContactUs"><i class="fa-thin fa-headset"></i>Contact Us</a>
+                        </li>
+                        @*<li style="max-height:40px" class="nav-item d-flex align-items-center">
+            <form style="max-height:40px" class="navbar-nav d-flex justify-content-center "margin-left:100px">
+                <input style="max-height:40px" class="form-control me-2" type="text" placeholder="Search">
+
+                <button style="max-height:40px" class="btn btn-primary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <br/>
+            </form>
+        </li>*@
+                        @*@if (User.IsInRole("Admin"))
                         {
-                            <li style="max-height:40px" class="nav-item d-flex align-items-center flex-grow-1 justify-content-end ">
-                                <a class="nav-link text-dark" id="adminPanel" asp-area="" asp-page="/AdminPanel">Admin Panel</a>
-                            </li>
-                            <li style="max-height:40px" class="nav-item d-flex align-items-center justify-content-end">
-                            <form method="post">
-                                <button type="submit" id="Logout" class="btn btn-primary" asp-page="=/../Logout" asp-page-handler="Logout">Logout</button>
-                            </form>
-                            </li>
-                        }
-                        else{
-                            <li style="max-height:40px" class="nav-item d-flex align-items-center flex-grow-1 justify-content-end">
-                            <form method="post">
-                                <button type="submit" id="Logout" class="btn btn-primary" asp-page="=/../Logout" asp-page-handler="Logout">Logout</button>
-                            </form>
-                            </li>
-                        }
-                            
-                     
-                        </ul>
+
+                                        <li style="max-height:40px" class="nav-item d-flex align-items-center justify-content-end">
+                                            <form method="post">
+                                                <button type="submit" id="Logout" class="btn btn-primary" asp-page="=/../Logout" asp-page-handler="Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+                                            </form>
+                                        </li>
+ }
+                                                        else
+                                                        {*@
+                                        <li style="max-height:40px" class="nav-item d-flex align-items-center flex-grow-1 justify-content-end">
+                                            <form method="post">
+                                                <button type="submit" id="Logout" class="btn btn-primary" asp-page="=/../Logout" asp-page-handler="Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+                                            </form>
+                                        </li>
+                        @* } *@
+
+
+                    </ul>
                     }
                                     else
                                     {
                         <ul class="navbar-nav d-flex justify-content-center-end flex-grow-1">
                             <li class="nav-item">
-                                <a class="btn" id="register" asp-area="" asp-page="/Register">Register</a>
+                                <a class="btn" id="register" asp-area="" asp-page="/Register"><i class="fa-solid fa-pen-to-square"></i>Register</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="btn" id="Login" asp-area="" asp-page="/Login">Login</a>
+                            <li class="nav-item">                                
+                                <a class="btn" id="Login" asp-area="" asp-page="/Login"><i class="fa-solid fa-sign-in"></i>Login</a>
                             </li>
-
+ 
                         </ul>}
 
                 </div>

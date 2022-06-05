@@ -26,17 +26,17 @@
                     <br />
                     <a class="btn btn-primary" asp-page="/ChangePassword">Edit Password</a>
                     <br />
-                    <a class="btn btn-primary " asp-page="/ChangeEmail">Edit Email\Username</a>
+                    <a class="btn btn-primary " asp-page="/ChangeEmail"><i class="fa-solid fa-pen-to-square"></i>Edit Email\Username</a>
                     <br />
-                    <a class="btn btn-primary " asp-page="/ProfilePicture">EditPicture</a>
+                    <a class="btn btn-primary " asp-page="/ProfilePicture"><i class="fa-solid fa-image"></i> Edit pic</a>
                     @if (await userManager.IsInRoleAsync(user, "Admin"))
                     {
                         <br />
-                        <a class="btn btn-primary " asp-page="/AddUser">Add users And managers</a>
+                        <a class="btn btn-primary " asp-page="/AddUser"><i class="fa-solid fa-user-plus"></i> Add users</a>
                         <br />
-                        <a class="btn btn-primary " asp-page="/EditNews">Edit News</a>
+                        <a class="btn btn-primary " asp-page="/EditNews"><i class="fa-solid fa-rectangle-ad"></i> Edit News</a>
                         <br />
-                        <a class="btn btn-primary " asp-route-id=27124892-6c79-4248-ac59-c789d2eabb2a asp-page="/DeleteUsers">Delete Users</a>
+                        <a class="btn btn-primary " asp-route-id=27124892-6c79-4248-ac59-c789d2eabb2a asp-page="/DeleteUsers"><i class="fa-solid fa-user-xmark"></i> Delete user</a>
                     }
                 </div>
             </div>
