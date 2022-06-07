@@ -32,7 +32,7 @@
             <a class="nav-link" data-bs-toggle="tab" href="#handball"><i class="fa-solid fa-futbol"></i> Handball</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#hockey"><i class="fa-solid fa-hockey-sticks"></i> Hockey</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#hockey"><i class="fa-solid fa-hockey-stick-puck"></i> Hockey</a>
         </li>
         }
 
@@ -168,9 +168,8 @@
                                         }
                                         <div class="match-actions">
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="() => { GameStatistics(index.id);}">
-                                                Statistics
-                                            </button>
+                                            <a class="bi bi-info-circle text-decoration-none btn-link" style="color:inherit; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="() => { GameStatistics(index.id);}">
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="match-content">
@@ -328,8 +327,8 @@
                                         </div>
                                     }
                                     <div class="match-actions">
-                                        @*<button class="btn-icon"><i class="material-icons-outlined">grade</i></button>
-                                            <button class="btn-icon"><i class="material-icons-outlined">add_alert</i></button>*@
+                                        <a class="bi bi-info-circle text-decoration-none btn-link" style="color:inherit; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="() => { GameStatistics(index.id);}">
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="match-content">
